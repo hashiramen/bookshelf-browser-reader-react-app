@@ -11,6 +11,10 @@ const bookshelf = (state = initialState, action) => {
             const newBooks = { ...state, books: { ...state.books } }
             newBooks.books[payload.title] = { ...payload }
             return { ...newBooks }
+        case bookshelfAction.REMOVE:
+            const newRemoveBooks = { ...state }
+            delete newRemoveBooks.books[payload.title]
+            return { ...newRemoveBooks }
     }
 
     return state

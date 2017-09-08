@@ -7,4 +7,11 @@ const addToBookshelf = (payload) => {
     }
 }
 
-export { addToBookshelf }
+const removeFromBookshelf = (payload) => {
+    return {
+        type: bookshelf.REMOVE,
+        payload
+    }
+}
+
+export { addToBookshelf, removeFromBookshelf }

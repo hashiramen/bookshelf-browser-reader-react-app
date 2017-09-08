@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
+//components
+import NavBookshelfListITem from '../components/NavBookshelfListItem'
+
 class BookshelfNav extends Component {
     constructor(){
         super()
@@ -11,6 +14,7 @@ class BookshelfNav extends Component {
         }
     }
 
+
     renderSavedBooks(){
         const { books } = this.props.bookshelf
         return Object.values(books)
@@ -18,12 +22,7 @@ class BookshelfNav extends Component {
                                 .slice(0, this.state.maxInTheShelf)
                                 .map( (book, index) => {
                                     return (
-                                        <li key={index}>
-                                            <div className="nav-img-book-container">
-                                                <img src={`http://wolnelektury.pl/media/${book.cover_thumb}`} draggable="false"/>
-                                            </div>
-                                            <p>{book.title}</p>
-                                        </li>
+                                        <NavBookshelfListITem key={index} { ...book } />
                                     )
                                 })
     }
@@ -31,7 +30,7 @@ class BookshelfNav extends Component {
     renderRedirectionToBookshelf(){
         const { books } = this.props.bookshelf
         if(Object.keys(books).length > this.state.maxInTheShelf){ 
-            return(<div className="nav-redirect-to-bookshelf"><Link to="/mybookshelf">Pokaż resztę</Link></div>) 
+            return(<div className="nav-redirect-to-bookshelf"><Link to="/mybookshelf">Zarządzaj szafką</Link></div>) 
         }
 
         return ''
@@ -45,7 +44,7 @@ class BookshelfNav extends Component {
         return (
             <div className="nav-bookshelf">
                 <div className="inner-nav-bookshelf">
-                    <h3>Your saved books</h3>
+                    <h3>Ostatnio zachowane lektury</h3>
                     <ul className="nav-bookshelf-list">
                         {this.renderSavedBooks()}
                     </ul>

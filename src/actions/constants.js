@@ -14,6 +14,7 @@ const book = {
 const bookshelf = {
     REQUEST: 'request_bookshelf',
     ADD: 'add_bookshelf',
+    REMOVE: 'remove_bookshelf',
     RECEIVE: 'receie_bookshelf',
     ERROR: 'error_bookshelf'
 }

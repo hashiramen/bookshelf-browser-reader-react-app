@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato|Raleway');
+
 
 :root {
     /* main colors */
@@ -27,7 +28,7 @@ body {
     margin: 0;
     color:#efefef;
     width: 100%;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
 }
 
 p,h1,h2,h3,h4,h5,h6 {
@@ -171,7 +172,7 @@ img{
 }
 .selected-bookshelf button{
     outline: none;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Raleway', sans-serif;
     border: none;
     display: inline;
     background: #d24d4d;
@@ -322,6 +323,7 @@ footer .credits{
     display: inline;
     color:var(--main-blue);
     text-decoration: underline;
+    font-weight: 600;
 }
 .book-title p:hover{
     cursor: pointer;
@@ -352,10 +354,13 @@ footer .credits{
     float: left;
     min-height: 8vh;
     max-height: 8vh;
+    background: #f14055;
+    border-bottom: var(--border-gray-size) solid var(--border-gray-transp);
 }
 
 
 .nav-bookshelf{
+    padding-top: 6%;
     width:100%;
     float:left;
 }
@@ -370,6 +375,7 @@ footer .credits{
     font-size: 1em;
     font-weight: 300;
     color:gray;
+    margin-bottom: .4rem;
 }
 
 .nav-bookshelf-list{
@@ -383,6 +389,8 @@ footer .credits{
 .nav-bookshelf-list li {
     overflow: hidden;
     padding: .3rem;
+    position: relative;
+    border-radius: 3px;
 }
 .nav-bookshelf-list li:hover {
     cursor: pointer;
@@ -392,10 +400,11 @@ footer .credits{
     
 }
 .nav-bookshelf-list li p{
-    font-weight: 100;
+    font-family: 'Raleway';
+    font-weight: 300;
     width:85%;
     float:left;
-    margin-top: .1rem;
+    margin-top: .3rem;
     margin-left: .4rem;
     font-size: .7rem;
 }
@@ -411,4 +420,57 @@ footer .credits{
 .nav-img-book-container img{
     width:100%;
     height: 100%;
+}
+.nav-redirect-to-bookshelf {
+    float:left;
+    width:100%;
+}
+.nav-redirect-to-bookshelf a{
+    padding: .3rem;
+    border-radius: 3px;
+    border:1px solid rgba(128, 128, 128, 0.25);
+    color: rgba(128, 128, 128, 0.25);
+    text-decoration: none;
+    margin:auto;
+    margin-top: .5rem;
+    width:94%;
+    text-align: center;
+    display: block;
+    transition: var(--main-transition);
+}
+.nav-redirect-to-bookshelf a:hover{
+    border:1px solid rgba(128, 128, 128, 1);
+    color: rgba(128, 128, 128, 1);
+}
+.nav-redirect-to-bookshelf a:active{
+    background: rgba(128, 128, 128, 0.25);
+}
+
+/* TOOLTIPS */
+.list-item-show-tooltip{
+    background: var(--main-blue);
+}
+.list-item-tooltip{
+    height: 100%;
+    width:100%;
+    position: absolute;
+    left: 0;
+    top:0;
+    text-align: center;
+    opacity: 0;
+    transition: var(--main-transition);
+    background: rgba(22, 162, 247, 0.5);;
+}
+.list-item-tooltip a{
+    font-weight: 900;
+    color:var(--main-white);
+    text-decoration: none;
+    display: block;
+    width:100%;
+    height: 100%;
+    margin-top: .5rem;
+    font-size: .8rem;
+}
+.list-item-show-tooltip > .list-item-tooltip{
+    opacity: 1;
 }

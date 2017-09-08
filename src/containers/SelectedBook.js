@@ -4,7 +4,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 
 import { resetSelectedBook } from '../actions/books_actions'
-import { addToBookshelf } from '../actions/bookshelf_action'
+import { addToBookshelf, removeFromBookshelf } from '../actions/bookshelf_action'
 
 class SelectedBook extends Component {
     constructor(){
@@ -15,6 +15,9 @@ class SelectedBook extends Component {
         this.props.addToBookshelf(this.props.booksmng.books[this.props.selectedBook.selected.title])
     }
 
+    handleRemovingFromBookshelf(){
+        this.props.removeFromBookshelf(this.props.booksmng.books[this.props.selectedBook.selected.title])
+    }
 
     // componentWillUnmount(){
     //     this.props.resetSelectedBook()
@@ -59,7 +62,8 @@ class SelectedBook extends Component {
                                 <Link to={`/reader/${urlString}`}>Czytaj online</Link>
                             </div>
                             <div className="selected-bookshelf">
-                                {_.has(books, title) ? <button onClick={() => this.handleRemovingBookFromBookshelf()}>Usuń z szafki -</button> : <button onClick={() => this.handleAddingToBookshelf()}>Dodaj do szafki +</button>}
+                                {_.has(books, title) ? <button onClick={() => this.handleRemovingFromBookshelf()}>Usuń z szafki -</button> : 
+                                                        <button onClick={() => this.handleAddingToBookshelf()}>Dodaj do szafki +</button>}
                             </div>
                         </div>
                     </div>
@@ -83,4 +87,4 @@ function mapStateToProps({selectedBook, booksmng, bookshelf}){
     }
 }
 
-export default connect(mapStateToProps, { resetSelectedBook, addToBookshelf })(SelectedBook);
+export default connect(mapStateToProps, { resetSelectedBook, addToBookshelf, removeFromBookshelf })(SelectedBook);
