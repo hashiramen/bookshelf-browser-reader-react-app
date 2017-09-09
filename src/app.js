@@ -4,9 +4,13 @@ import { Provider } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import createSagaMiddleware from 'redux-saga'
 
+//LAYOUTS
 import Default from './components/layouts/Default'
+import ReaderDefault from './components/layouts/ReaderDefault'
+
+//CONTAINERS
 import Home from './containers/home/Home'
-import Reader from './containers/Reader'
+import Reader from './containers/reader/Reader'
 
 import reducers from './reducers'
 import rootSaga from './sagas'
@@ -32,7 +36,7 @@ const routing = () => (
     <Router>
         <Switch>
             <Route exact path="/" render={() => <Default><Home/></Default>} />
-            <Route path="/reader/:title" render={(props) => <Reader {...props}/>} />
+            <Route path="/reader/:title" render={(props) => <ReaderDefault><Reader {...props}/></ReaderDefault>} />
         </Switch>
     </Router>
 )

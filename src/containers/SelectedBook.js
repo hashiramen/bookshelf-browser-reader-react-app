@@ -25,6 +25,7 @@ class SelectedBook extends Component {
 
     render() {
         const { pending, selected } = this.props.selectedBook
+        console.log('selected', selected)
         const { books } = this.props.bookshelf
         if(pending){
             return <div className="selected-book-wrapper">Loading...</div>

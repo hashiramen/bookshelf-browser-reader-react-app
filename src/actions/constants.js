@@ -19,9 +19,17 @@ const bookshelf = {
     ERROR: 'error_bookshelf'
 }
 
+const reader = {
+    REQUEST: 'request_reader',
+    RECEIVE: 'receive_reader',
+    ERROR: 'error_reader',
+    CHANGE_THEME: 'change_theme_reader',
+    CHANGE_FONT: 'change_font_reader',
+    CHANGE_SIZE: 'change_size_reader'
+}
 
 const ui = {
     SWITCH_NAVIGATION: 'switch_navigation'
 }
 
-export { books, ui, book, bookshelf }
+export { books, ui, book, bookshelf, reader }

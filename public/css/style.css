@@ -242,10 +242,26 @@ img{
     max-height: 77.5vh;
     overflow-y: scroll;
     transition:var(--main-transition);
-}   
+}
+.reader-wrapper{
+    padding: 2rem 0;
+    width:100%;
+    float:left;
+    min-height: 77.5vh;
+    max-height: 77.5vh;
+    overflow-y: scroll;
+    transition:var(--main-transition);
+    color:black;
+    position: relative;
+}
 
 .middle-wrapper{
     width: 93%;
+    margin: auto;
+}
+
+.middle-reader-wrapper {
+    max-width: 70%;
     margin: auto;
 }
 
@@ -474,3 +490,180 @@ footer .credits{
 .list-item-show-tooltip > .list-item-tooltip{
     opacity: 1;
 }
+
+
+/* READER */
+.reader-wrapper .reader-burger {
+
+}
+
+.reader-wrapper .reader-settings {
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 0;
+    overflow: hidden;
+    transition: var(--main-transition);
+}
+
+.reader-wrapper .reader-settings-open {
+    min-width: 60%;
+    transition: var(--main-transition);
+}
+
+.reader-settings:hover{
+    cursor: pointer;
+}
+.reader-settings:hover > i{
+    opacity:.5;
+}
+
+.reader-settings i {
+    padding: 0rem 1rem;
+    float:left;
+    line-height: 50px;
+    transition: var(--main-transition);
+}
+
+.reader-settings .reader-settings-dropdown{
+    float:left;
+    max-width: 0;
+    min-width: 0;
+    overflow: hidden;
+    transition: var(--main-transition);
+    height: 100%;
+    background: var(--border-gray-transp);
+}
+
+.reader-settings-open > .reader-settings-dropdown {
+    min-width: 86.5%;
+    transition: var(--main-transition);
+}
+
+.reader-settings-dropdown:hover {
+    cursor: default;
+}
+
+.reader-settings-dropdown .settings-size{
+    width:25%;
+    float: left;
+}
+
+.reader-settings-dropdown .settings-font {
+    width:30%;
+    float:left;
+}
+
+.reader-settings-dropdown .settings-theme {
+    width: 45;
+    float:left;
+}
+.reader-settings-dropdown p {
+    font-size:.5em;
+    width:100%;
+    float:left;
+    text-align: center;
+}
+
+.reader-wrapper #book-text{
+
+}
+
+#book-text #toc{
+
+}
+
+#book-text #themes {
+
+}
+
+#book-text #nota_red {
+    
+}
+
+#book-text h1{
+
+}
+
+#book-test .person-list {
+
+}
+
+.person-list h3{
+    
+}
+
+.person-list ol{
+    
+}
+
+.person-list ol li{
+    
+}
+
+.person-list ol li .person{
+    
+}
+
+#book-text .target{
+    
+}
+    
+#book-text .anchor{
+        
+}
+    
+
+/* PARAGRAPS */
+#books-text .paragraph {
+
+}
+
+.paragraph a{
+
+}
+
+
+/* STANZAS */
+#books-text .stanza{
+    
+}
+
+.stanza .verse{
+    
+}
+
+.stanza .verse .theme-begin {
+
+}
+
+.stanza .target{
+
+}
+
+.stanza .anchor{
+
+}
+
+.stanza a{
+
+}
+
+.reader-wrapper #footnotes {
+
+}
+
+
+/* DIDASKALIA */
+#book-text .didaskalia {
+
+}
+
+
+/* KWESTIA */
+#book-test .kwestia {
+
+}
+
+/* END OF THE READ */
