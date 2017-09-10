@@ -1,0 +1,62 @@
+
+.book-container{
+    overflow: hidden;
+    .book {
+        position: relative;
+        margin: 0 1rem;
+        margin-bottom: 2em;
+        padding-bottom: .1rem;
+        float:left;
+        min-width: 170px;
+        max-width: 170px;
+        min-height: 300px;
+        max-height: 300px;
+        animation: slideIn .8s;
+        &:hover{
+
+        }
+
+        .book-thumb{
+            width:100%;
+            box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7); 
+            img{
+                width:100%;
+                box-sizing: border-box;
+                display: block;
+            }
+        }
+
+        .book-title{
+            margin-top: .5em;
+            float: left;
+            width: 100%;
+            p{
+                font-size: .95rem;
+                display: inline;
+                color:$main-blue;
+                text-decoration: underline;
+                font-weight: 600;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .book-author{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            p{
+                color:$main-blackish-font;
+                margin: 0;
+                padding: 0;
+                font-size:.75rem;  
+            }
+        }
+    }
+}
+
+@keyframes slideIn {
+    0% { opacity: 0 }
+    100%{ opacity: 1 }
+}

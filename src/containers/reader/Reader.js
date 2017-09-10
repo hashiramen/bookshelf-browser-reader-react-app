@@ -8,9 +8,10 @@ import { requestReader, changeFont, changeTheme, changeSize } from '../../action
 //components
 import Settings from '../../components/reader/Settings'
 
+
 class Reader extends Component {
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.handleModeChange = this.handleModeChange.bind(this)
     }
@@ -18,6 +19,13 @@ class Reader extends Component {
     componentDidMount() {
         console.log('cdm', this.props)
         this.props.requestReader(this.props.match.params.title)
+    }
+
+    componentWillReceiveProps(nextProps){
+        if(this.props.match.params.title !== nextProps.match.params.title) {
+            console.log('called')
+            this.props.requestReader(nextProps.match.params.title)
+        }
     }
 
     handleFontChange(){
@@ -49,6 +57,7 @@ class Reader extends Component {
         return (
             <div className="middle-reader-wrapper">
                 <div className="reader-burger">
+                    {this.props.match.params.title}
                 </div>
                 <Settings changeFont={this.handleFontChange} changeMode={this.handleModeChange} changeSize={this.handleSizeChange} />
                 <Link to="/">Homepage</Link>

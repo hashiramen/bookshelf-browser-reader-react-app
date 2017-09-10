@@ -1,8 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Oswald|Lato|Raleway');
+/* :root {
 
-
-:root {
-    /* main colors */
     --main-white:#fdfdfd;
     --main-whiteish:#f8f8f8;
     --main-blackish:#3b3b3b;
@@ -15,15 +12,14 @@
     --main-blue:#16a2f7;
     --main-rotten:#d7c783;
 
-    /*borders*/
     --border-gray-size: 3px;
     --border-gray-transp: rgba(0,0,0, 0.05);
     --border-book:rgba(0,0,0, .085);
 
     --main-transition: .3s ease-in;
-}
+} */
 
-body {
+/* body {
     padding: 0;
     margin: 0;
     color:#efefef;
@@ -41,9 +37,9 @@ img{
     width:100%;
     box-sizing: border-box;
     display: block;
-}
+} */
 /* main grid style */
-.site-wrapper {
+/* .site-wrapper {
     width:100%;
     min-height: 100vh;
 }
@@ -71,10 +67,10 @@ img{
     max-height: 8vh;
     width: 100%;
     float:left;
-}
+} */
 
 /* selected book */
-.selected-book-wrapper{
+/* .selected-book-wrapper{
     font-size:1.5rem;
     color:var(--main-blackish);
     min-height: 0;
@@ -221,9 +217,9 @@ img{
 }
 .selected-back button:active{
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
-}
+} */
 
-.filter-wrapper{
+/* .filter-wrapper{
     padding: .5rem 0;
     border-top: var(--border-gray-size) solid var(--border-gray-transp);
     border-bottom: var(--border-gray-size) solid var(--border-gray-transp);
@@ -263,8 +259,8 @@ img{
 .middle-reader-wrapper {
     max-width: 70%;
     margin: auto;
-}
-
+} */
+/* 
 footer{
     border-top: 3px solid var(--border-gray-transp);
     width:100%;
@@ -291,11 +287,11 @@ footer .credits{
 
 .credits p a:hover{
     opacity:.8;
-}
+} */
 
 /* books part */
 
-
+/* 
 .book-container{
     overflow: hidden;
 }
@@ -361,11 +357,11 @@ footer .credits{
 @keyframes slideIn {
     0% { opacity: 0 }
     100%{ opacity: 1 }
-}
+} */
 
 
 /* NAVIGATION */
-.nav-header{
+/* .nav-header{
     width:100%;
     float: left;
     min-height: 8vh;
@@ -460,10 +456,10 @@ footer .credits{
 }
 .nav-redirect-to-bookshelf a:active{
     background: rgba(128, 128, 128, 0.25);
-}
+} */
 
 /* TOOLTIPS */
-.list-item-show-tooltip{
+/* .list-item-show-tooltip{
     background: var(--main-blue);
 }
 .list-item-tooltip{
@@ -489,20 +485,20 @@ footer .credits{
 }
 .list-item-show-tooltip > .list-item-tooltip{
     opacity: 1;
-}
+} */
 
 
 /* READER */
-.reader-wrapper .reader-burger {
+/* .reader-wrapper .reader-burger {
 
 }
 
 .reader-wrapper .reader-settings {
     height: 50px;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
-    min-width: 0;
+    left: 17%;
+    min-width: auto;
     overflow: hidden;
     transition: var(--main-transition);
 }
@@ -527,29 +523,65 @@ footer .credits{
 }
 
 .reader-settings .reader-settings-dropdown{
+    display: none;
     float:left;
-    max-width: 0;
-    min-width: 0;
-    overflow: hidden;
+    min-width: 86.5%;
+    overflow: unset;
     transition: var(--main-transition);
     height: 100%;
-    background: var(--border-gray-transp);
+    color:black;
+    background: black;
+    position: relative;
 }
 
 .reader-settings-open > .reader-settings-dropdown {
+    display: block;
+    overflow: unset;
     min-width: 86.5%;
     transition: var(--main-transition);
+    color:var(--main-whiteish);
 }
+.reader-settings-dropdown:before {
+    content:"\A";
+    border-style: solid;
+    border-width: 10px 15px 10px 0;
+    border-color: transparent black transparent transparent;
+    position: absolute;
+    left: 0;
+}
+.reader-settings-open > .reader-settings-dropdown:before {
+    left: -15px;
+    transition: var(--main-transition);
+}
+
 
 .reader-settings-dropdown:hover {
     cursor: default;
 }
 
 .reader-settings-dropdown .settings-size{
-    width:25%;
+    width:9%;
     float: left;
 }
 
+.settings-size span{
+    width:50%;
+    float:left;
+    text-align: center;
+    font-weight: 600;
+}
+.settings-size span:hover {
+    cursor: pointer;
+    opacity: .5;
+}
+.settings-size span:first-of-type{
+    font-size: 1rem;
+    line-height: 2rem;
+}
+.settings-size span:last-of-type{
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+}
 .reader-settings-dropdown .settings-font {
     width:30%;
     float:left;
@@ -560,11 +592,13 @@ footer .credits{
     float:left;
 }
 .reader-settings-dropdown p {
+    margin-top: .2rem;
     font-size:.5em;
     width:100%;
     float:left;
     text-align: center;
-}
+} */
+
 
 .reader-wrapper #book-text{
 

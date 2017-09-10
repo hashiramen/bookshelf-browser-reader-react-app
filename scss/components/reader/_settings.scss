@@ -1,0 +1,122 @@
+
+.reader-wrapper {
+    .reader-burger{
+
+    }
+
+    .reader-settings{
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 17%;
+        min-width: auto;
+        overflow: hidden;
+        transition: $main-transition;
+        &:hover{
+            cursor: pointer;
+        }
+
+        &:hover > i{
+            opacity:.5;
+        }
+
+        i{
+            padding: 0rem 1rem;
+            float:left;
+            line-height: 50px;
+            transition: $main-transition;
+        }
+
+        .reader-settings-dropdown{
+            display: none;
+            float:left;
+            min-width: 86.5%;
+            overflow: unset;
+            transition: $main-transition;
+            height: 100%;
+            color:black;
+            background: black;
+            position: relative;
+            
+            &:before{
+                content:"\A";
+                border-style: solid;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent black transparent transparent;
+                position: absolute;
+                left: 0;
+                top:5px;          
+            }
+
+            &:hover{
+                cursor: default;     
+            }
+
+            p{
+                margin-top: .2rem;
+                font-size:.5em;
+                width:100%;
+                float:left;
+                text-align: center;
+            }
+
+            .settings-size{
+                width:16%;
+                float: left;
+                
+                span{
+                    width:50%;
+                    float:left;
+                    text-align: center;
+                    font-weight: 600;
+
+                    &:hover{
+                        cursor: pointer;
+                        opacity: .5;
+                    }
+
+                    &:first-of-type{
+                        font-size: 1rem;
+                        line-height: 2rem;
+                    }
+
+                    &:last-of-type{
+                        font-size: 1.2rem;
+                        line-height: 1.8rem;
+                    }
+                }
+            }
+
+            .settings-font{
+                width:30%;
+                float:left;
+            }
+
+            .settings-theme{
+                width: 45;
+                float:left;
+            }
+        }
+        
+        & > .reader-settings-dropdown{
+            display: block;
+            overflow: unset;
+            min-width: 86.5%!important;
+            transition: $main-transition;
+            color:$main-whiteish;
+            margin-top: 4px;
+            margin-left: 10px;
+        }
+        
+        & > .reader-settings-dropdown:before{
+            left: -10px;
+            transition: $main-transition;
+        }
+    }
+
+    .reader-settings-open{
+        min-width: 36%;
+        transition: $main-transition;
+        overflow: unset;
+    }
+}

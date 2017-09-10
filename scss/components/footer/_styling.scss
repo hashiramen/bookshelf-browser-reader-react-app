@@ -1,0 +1,27 @@
+footer{
+    border-top: 3px solid $border-gray-transp;
+    width:100%;
+    float: left;
+    min-height: 3.7vh;
+    max-height: 3.7vh;
+}
+
+footer .credits{
+    float:right;
+}
+
+.credits p{
+    color:$main-blackish-font;
+    font-size: .8rem;
+    padding-right: 1rem;
+    margin-top: .5rem;
+}
+
+.credits p a{
+    color:$main-blackish-font;
+    text-decoration: none;
+}
+
+.credits p a:hover{
+    opacity:.8;
+}

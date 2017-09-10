@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Lato|Raleway');
+
+//Global variables
+@import 'variables/global';
+
+//reset
+@import 'reset';
+
+//defaults/wrappers
+@import 'defaults/index';
+
+//1.Selected book
+//2.Homepage book
+//3.Reader
+//4.footer
+//5.Navigation
+@import 'components/selected_book/index';
+@import 'components/homepage_book/index';
+@import 'components/reader/index';
+@import 'components/footer/index';
+@import 'components/navigation/index';
+

@@ -1,0 +1,148 @@
+
+
+/* selected book */
+.selected-book-wrapper{
+    .inner-selected-wrapper {
+        .selected-title {
+            width:100%;
+            float:left;
+            h1 {
+                display: inline;
+            }
+        }
+
+        .selected-info {
+            width:80%;
+            float:left;
+            .selected-cover {
+                min-width:30%;
+                max-width: 30%;
+                float:left;
+                img{
+
+                }
+            }
+
+            .selected-details {
+                width:69%;
+                float:left;
+                padding-left: 1%;
+                p{
+                    span {
+                        font-weight: 900;
+                    }
+                }
+
+                .selected-author {
+                    width:100%;
+                    float:left;
+                }
+
+                .selected-epochs {
+
+                }
+
+                .selected-kinds {
+
+                }
+
+                .selected-genres {
+
+                }
+
+                .selected-read-online {
+                    width:100%;
+                    float:left;
+                    a {
+                        display: inline;
+                        background: $main-blue;
+                        border-radius: .3rem;
+                        padding: .1rem 3rem;
+                        font-size:.7em;
+                        text-decoration: none;
+                        color:$main-white;
+                        box-shadow: 0px 3px #2980b9;
+                        &:active{
+                            position:relative;
+                            top:3px;
+                            box-shadow: 0px 0px #2980b9;
+                        }
+                    }
+                }
+
+                .selected-bookshelf {
+                    width:100%;
+                    float:left;
+                    button {
+                        outline: none;
+                        font-family: 'Raleway', sans-serif;
+                        border: none;
+                        display: inline;
+                        background: #d24d4d;
+                        border-radius: .3rem;
+                        padding: .1rem 3rem;
+                        font-size:.7em;
+                        text-decoration: none;
+                        color:var(--main-white);
+                        box-shadow: $main-redish;
+                        &:active {
+                            position:relative;
+                            top:3px;
+                            box-shadow: 0px 0px $main-redish;
+                        }
+
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+
+        .selected-tools {
+            width:20%;
+            float:left;
+        }
+
+        .selected-back {
+            width: 100%;
+            float:left;
+            margin-top: 5vh;
+            button {
+                outline: none;
+                color:rgba(0, 0, 0, 0.4);
+                font-size:.95rem;
+                width:40%;
+                display: block;
+                box-sizing: border-box;
+                background: #f9f9f9;
+                border: none;
+                border-radius: .3rem;
+                box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2); 
+                margin:auto;
+                padding: .6rem 1rem;
+                transition: $main-transition;
+                &:active{
+                    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2);
+                }
+
+                &:hover{
+                    background: #f5f5f5;
+                    cursor: pointer;
+                    background: hover;
+                }
+            }
+        }
+    }
+}
+
+.not-empty-book{
+    min-height: 88.5vh;
+    max-height: 88.5vh;
+    transition:var(--main-transition);
+    animation: appearSelected 2s;
+}
+@keyframes appearSelected {
+    0% { opacity: 0 }
+    100%{ opacity: 1 }
+}

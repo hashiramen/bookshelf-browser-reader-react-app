@@ -1,0 +1,70 @@
+$sepia-color: #704214;
+$sepia-background: #f3eacb;
+$sepia-dark:#111;
+
+.theme-sepia{
+    .right-side{
+        .reader-wrapper{
+            background: $sepia-background;
+            color:$sepia-color;
+            .middle-reader-wrapper{
+                .reader-settings{
+                    i{
+                        color:$sepia-color;
+                    }
+            
+                    .reader-settings-dropdown{
+                        color:$sepia-background;
+                        background: $sepia-dark;
+                        &:before{
+                            border-color: transparent $sepia-dark transparent transparent;
+                        }
+                    }
+                }
+            }
+        }  
+    }
+}
+
+
+
+.theme-sepia{
+    .left-side{
+        background: $sepia-dark;
+        .navigation-wrapper{
+            .nav-header{
+                background: transparent;
+            }
+
+            .nav-bookshelf{
+                .inner-nav-bookshelf{
+                    h3{
+                        color:$sepia-background;
+                        opacity: .3;
+                    }
+
+                    .nav-bookshelf-list{
+                        li{
+                            p{
+                                color:$sepia-background;
+                                opacity: .3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.theme-sepia{
+    footer{
+        background: $sepia-dark;
+        p{
+            color:$sepia-background;
+            a{
+                color:$sepia-color;
+            }
+        }
+    }
+}

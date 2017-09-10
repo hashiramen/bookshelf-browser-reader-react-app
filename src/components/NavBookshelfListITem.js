@@ -12,18 +12,19 @@ class NavBookshelfListItem extends Component {
 
     handleListItemMouseEnter(){
         this.setState({
-            hovered: !this.state.hovered
+            hovered: true
         })
     }
 
     handleListItemMouseLeave(){
         this.setState({
-            hovered: !this.state.hovered
+            hovered: false
         })   
     }
 
     render() {
-        const { cover_thumb, title} = this.props
+        const { cover_thumb, title, url} = this.props
+        const newUrl = url.replace('http://wolnelektury.pl/katalog/lektura/', '')
         return (
             <li onMouseEnter={() => this.handleListItemMouseEnter()} 
                 onMouseLeave={() => this.handleListItemMouseLeave()} 
@@ -33,7 +34,7 @@ class NavBookshelfListItem extends Component {
                 </div>
                 <p>{title}</p>
                 <div className="list-item-tooltip">
-                    <Link to="/reader/url">zacznij czytać</Link>
+                    <Link to={`/reader/${newUrl}`}>zacznij czytać</Link>
                 </div>
             </li>
         );

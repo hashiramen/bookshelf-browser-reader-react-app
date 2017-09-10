@@ -18,16 +18,19 @@ class Settings extends Component {
     render() {
         return (
             <div className={`reader-settings ${this.state.open ? 'reader-settings-open': ''}`} 
-                    onClick={() => this.setState({open: true})}
-                    onMouseEnter={() => this.setState({open: true})}
-                    onMouseLeave={() => this.setState({open: false})}>
-                <i className="fa fa-font" />
+                    // onClick={() => this.setState({open: !this.state.open})}
+                    // onMouseEnter={() => this.setState({open: true})}
+                    // onMouseLeave={() => this.setState({open: false})}
+                    >
+                <i className="fa fa-font" onClick={() => this.setState({open: !this.state.open})} />
                 <div className="reader-settings-dropdown">
                     <div className="settings-size">
-                        <p>size</p>
+                        <p>rozmiar</p>
+                        <span onClick={() => console.log('small font')}>A</span>
+                        <span onClick={() => console.log('huge font')}>A</span>
                     </div>
                     <div className="settings-font">
-                        <p>font</p>
+                        <p>czcionka</p>
                     </div>
                     <div className="settings-theme">
                     </div>
