@@ -1,3 +1,78 @@
-body {
+$night-color: #b1b1b1;
+$night-background: #2e353c;
+$night-nav-color:#b1b1b1;
+$night-dark:#292F36;
+$night-anchor:rgba(127,203,207, .29);
 
+.theme-night{
+    .right-side{
+        .reader-wrapper{
+            background: $night-background;
+            color:$night-color;
+            .middle-reader-wrapper{
+                .reader-settings{
+                    i{
+                        color:$night-color;
+                    }
+            
+                    .reader-settings-dropdown{
+                        color:$night-nav-color;
+                        background: $night-dark;
+                        &:before{
+                            border-color: transparent $night-dark transparent transparent;
+                        }
+                    }
+                }
+
+                #book-text{
+                    .anchor{
+                        color:$night-anchor;
+                    }
+                }
+            }
+        }  
+    }
+}
+
+
+
+.theme-night{
+    .left-side{
+        background: $night-dark;
+        .navigation-wrapper{
+            .nav-header{
+                background: transparent;
+            }
+
+            .nav-bookshelf{
+                .inner-nav-bookshelf{
+                    h3{
+                        color:$night-nav-color;
+                        opacity: .3;
+                    }
+
+                    .nav-bookshelf-list{
+                        li{
+                            p{
+                                color:$night-nav-color;
+                                opacity: .3;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.theme-night{
+    footer{
+        background: $night-dark;
+        p{
+            color:$night-nav-color;
+            a{
+                color:$night-anchor;
+            }
+        }
+    }
 }

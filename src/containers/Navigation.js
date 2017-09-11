@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-
+import { Link } from 'react-router-dom'
 import BookshelfNav from './BookshelfNav'
 //actions
 import { switchNavigation } from '../actions/ui_events_action'
@@ -24,6 +24,7 @@ class Navigation extends Component {
                 <div className="nav-header">
                     header
                 </div>
+                <Link to="/">Homepage</Link>
                 <BookshelfNav />
             </div>
         );

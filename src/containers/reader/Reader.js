@@ -14,6 +14,8 @@ class Reader extends Component {
         super(props)
 
         this.handleModeChange = this.handleModeChange.bind(this)
+        this.handleFontChange = this.handleFontChange.bind(this)
+        this.handleSizeChange = this.handleSizeChange.bind(this)
     }
 
     componentDidMount() {
@@ -28,18 +30,18 @@ class Reader extends Component {
         }
     }
 
-    handleFontChange(){
-        console.log('font changed')
+    handleFontChange(font){
+        console.log('font changed', font)
+        this.props.changeFont(font)
     }
 
     handleModeChange(theme){
-        console.log('mode changed', theme)
-        console.log('funkcja', this.props)
         this.props.changeTheme(theme)
     }
 
-    handleSizeChange(){
+    handleSizeChange(size){
         console.log('size changed')
+        this.props.changeSize(size)
     }
 
 
@@ -56,13 +58,10 @@ class Reader extends Component {
         const cleanHTML = DOMPurify.sanitize(html)
         return (
             <div className="middle-reader-wrapper">
-                <div className="reader-burger">
-                    {this.props.match.params.title}
-                </div>
+                <div className="reader-burger"></div>
                 <Settings changeFont={this.handleFontChange} changeMode={this.handleModeChange} changeSize={this.handleSizeChange} />
-                <Link to="/">Homepage</Link>
-                <br /><br />
-                <div dangerouslySetInnerHTML={{ __html: cleanHTML}} />
+                <div dangerouslySetInnerHTML={{ __html: html}} />
+
             </div>
         );
     }

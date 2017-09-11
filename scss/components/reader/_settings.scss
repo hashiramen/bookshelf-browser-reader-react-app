@@ -12,6 +12,7 @@
         min-width: auto;
         overflow: hidden;
         transition: $main-transition;
+        z-index: 999;
         &:hover{
             cursor: pointer;
         }
@@ -90,11 +91,55 @@
             .settings-font{
                 width:30%;
                 float:left;
+                ul{
+                    list-style-type: none;
+                    width:100%;
+                    float:left;
+                    text-align: center;
+                    margin-top: .6rem;
+                    li{
+                        font-size:.8em;
+                        width:100%;
+                        float:left;
+                        &:first-child{
+                            font-family: 'Libre Baskerville'!important;
+                        }
+                        &:last-child{
+                            font-family: 'Cormorant Garamond'!important;
+                        }
+                    }
+                }
             }
 
             .settings-theme{
-                width: 45;
+                width: 50%;
                 float:left;
+
+                .theme-variety{
+                    width:22%;
+                    height: 25px;
+                    background: red;
+                    float:left;
+                    margin: 5%;
+
+                    &:hover{
+                        opacity:.8;
+                        cursor: pointer;
+                    }
+                }
+
+                .default{
+                    background: linear-gradient(to right, #f8f8f8 , #fdfdfd, #3b3b3b, #f14055);
+                }
+
+                .sepia{
+                    background: linear-gradient(to right, #704214 , #f3eacb, #111);
+                }
+
+                .night{
+                    background: linear-gradient(to right, #292F36, #b1b1b1 , #2e353c);
+                }
+                
             }
         }
         

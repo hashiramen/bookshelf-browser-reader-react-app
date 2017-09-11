@@ -10,9 +10,7 @@ class Settings extends Component {
     }
 
     componentDidMount() {
-        this.props.changeFont()
-        this.props.changeSize()
-        this.props.changeMode('theme-sepia')
+
     }
 
     render() {
@@ -26,13 +24,20 @@ class Settings extends Component {
                 <div className="reader-settings-dropdown">
                     <div className="settings-size">
                         <p>rozmiar</p>
-                        <span onClick={() => console.log('small font')}>A</span>
-                        <span onClick={() => console.log('huge font')}>A</span>
+                        <span onClick={() => this.props.changeSize('')}>A</span>
+                        <span onClick={() => this.props.changeSize('large-font')}>A</span>
                     </div>
                     <div className="settings-font">
-                        <p>czcionka</p>
+
+                        <ul>
+                            <li onClick={() => this.props.changeFont('Libre Baskerville')}>Libre Baskerville</li>
+                            <li onClick={() => this.props.changeFont('Cormorant Garamond')}>Cormorant Garamond</li>
+                        </ul>
                     </div>
                     <div className="settings-theme">
+                        <div className="theme-variety default" onClick={() => this.props.changeMode('')}></div>
+                        <div className="theme-variety sepia" onClick={() => this.props.changeMode('theme-sepia')}></div>
+                        <div className="theme-variety night" onClick={() => this.props.changeMode('theme-night')}></div>
                     </div>
                 </div>
             </div>

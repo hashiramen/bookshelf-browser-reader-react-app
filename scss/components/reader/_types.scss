@@ -1,0 +1,211 @@
+
+.reader-wrapper{
+    #book-text{
+        width:100%;
+        float:left;
+        #toc{
+            display: none;
+        }
+
+        #themes{
+            display: none;
+        }
+
+        #nota_red{
+            display: none;
+        }
+
+        h1{
+            width:100%;
+            display: inline-block;
+            text-align: left;
+            margin-bottom: 3rem;
+            span{
+                width:100%;
+                display: inline-block;
+                float: left;
+            }
+            .author{
+                font-size:.95rem;
+            }
+
+            .collection{
+
+            }
+
+            .title{
+                font-size: 3.5rem;
+                border-bottom:1px solid rgba(0,0,0, .05);
+                margin-bottom: .4rem;
+                padding-bottom: .4rem;
+            }
+
+            .translator{
+                font-size: .65rem;
+            }
+        }
+
+        h2{
+            margin-top: 1.5rem;
+            width:100%;
+            display: inline-block;
+        }
+
+        h3{
+            font-size: 1.5em;
+            margin: 1.5em 0 0;
+            font-weight: normal;
+            line-height: 1.5em;
+            width:100%;
+            display: inline-block;
+        }
+
+        .person-list{
+            h3{
+
+            }
+
+            ol{
+                li{
+                    .person{
+
+                    }
+                }
+            }
+        }
+
+        .target{
+
+        }
+
+        .anchor{
+            font-size: .8em;
+            margin-left: -34px;
+            margin-right: -7px;
+            width: 6%;
+            height: auto;
+            text-align: center;
+            color: #ccc;
+            float: left;
+            text-decoration: none;
+        }
+    }
+
+    #foot-notes{
+
+    }
+}
+
+
+//paragraph
+.reader-wrapper {
+    #book-text{
+        .paragraph{
+            font-size: .9rem;
+            text-align: justify;
+            margin: 0;
+            text-indent: 1.5em;
+            position: relative;
+            float: left;
+            width: 101%;
+            a{
+
+            }
+
+            .theme-begin{
+                width: 120px;
+                width: 7.5rem;
+                height: auto;
+                overflow: visible;
+                margin-left: 30px;
+                margin-left: 1.875rem;
+                font-size: 14.4px;
+                font-size: 0.9rem;
+                text-indent: 0;
+                border-left: 1px solid #DDDDDD;
+                border-left: 0.0625rem solid #DDDDDD;
+                color: #777;
+                padding: 0 0 0 8px;
+                padding: 0 0 0 0.5rem;
+                position: absolute;
+                left: 100%;
+            }
+        }
+    }
+}
+
+//stanza
+.reader-wrapper{
+    #book-text{
+        .stanza{
+            width:100%;
+            float:left;
+            margin-top: 1.5rem;
+            .verse{
+                font-size: .9rem;
+                text-align: justify;
+                margin: 0;
+                position: relative;
+                float: left;
+                width: 101%;
+
+                .theme-begin{
+                    width: 120px;
+                    width: 7.5rem;
+                    height: auto;
+                    overflow: visible;
+                    margin-left: 30px;
+                    margin-left: 1.875rem;
+                    font-size: 14.4px;
+                    font-size: 0.9rem;
+                    text-indent: 0;
+                    border-left: 1px solid #DDDDDD;
+                    border-left: 0.0625rem solid #DDDDDD;
+                    color: #777;
+                    padding: 0 0 0 8px;
+                    padding: 0 0 0 0.5rem;
+                    position: absolute;
+                    left: 100%;
+                }
+            }
+
+
+
+            .anchor{
+                font-size: .8em;
+                margin-left: -34px;
+                margin-right: -7px;
+                width: 6%;
+                height: auto;
+                text-align: center;
+                color: #ccc;
+                float: left;
+                text-decoration: none;
+            }
+
+            a{
+
+            }
+        }
+    }
+}
+
+
+//didaskalia
+.reader-wrapper{
+    #book-text{
+        .didaskalia{
+
+        }
+    }
+}
+    
+
+//kwestia
+.reader-wrapper{
+    #book-text{
+        .kwestia{
+            
+        }
+    }
+}

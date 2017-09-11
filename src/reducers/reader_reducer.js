@@ -3,9 +3,9 @@ import { reader as readerAction } from '../actions/constants'
 const initialState = {
     html: undefined,
     pending: false,
-    font: 'font-default',
-    mode: 'theme-default',
-    size: 'size-default'
+    font: 'Libre-Baskerville',
+    mode: '',
+    size: ''
 }
 
 const reader = (state = initialState, action) => {

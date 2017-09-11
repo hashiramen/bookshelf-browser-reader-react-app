@@ -15,7 +15,7 @@ class ReaderDefault extends Component {
     render() {
         const { font, size, mode} = this.props
         return (
-            <div className={`site-wrapper ${mode}`}>
+            <div className={`site-wrapper ${mode} ${typeof font !== 'undefined' ? `font-${font.replace(' ', '-')} ${size}` : ''}`}>
                 <div className="left-side">
                     <div className="navigation-wrapper">
                         <Navigation />

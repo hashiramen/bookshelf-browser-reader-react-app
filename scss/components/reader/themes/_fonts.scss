@@ -1,0 +1,25 @@
+.font-Libre-Baskerville{
+    .right-side{
+        font-family: 'Libre Baskerville';
+    }
+}
+
+.font-Cormorant-Garamond{
+    .right-side{
+        font-family: 'Cormorant Garamond';
+    }
+}
+
+.large-font{
+    .right-side{
+        #book-text{
+            .paragraph{
+                font-size:1.2rem;
+            }
+    
+            .verse{
+                font-size:1.2em;
+            }
+        }
+    }
+}
