@@ -4,10 +4,11 @@ import { connect } from 'react-redux'
 import DOMPurify from 'dompurify'
 
 import { requestReader, changeFont, changeTheme, changeSize } from '../../actions/reader_action'
+import { switchNavigation } from '../../actions/ui_events_action'
 
 //components
 import Settings from '../../components/reader/Settings'
-
+import Burger from '../../components/navigation/Burger'
 
 class Reader extends Component {
     constructor(props){
@@ -16,6 +17,7 @@ class Reader extends Component {
         this.handleModeChange = this.handleModeChange.bind(this)
         this.handleFontChange = this.handleFontChange.bind(this)
         this.handleSizeChange = this.handleSizeChange.bind(this)
+        this.handleNavigationState = this.handleNavigationState.bind(this)
     }
 
     componentDidMount() {
@@ -44,6 +46,9 @@ class Reader extends Component {
         this.props.changeSize(size)
     }
 
+    handleNavigationState(){
+        this.props.switchNavigation()
+    }
 
     render() {
         const { html, pending } = this.props.reader
@@ -57,12 +62,14 @@ class Reader extends Component {
 
         const cleanHTML = DOMPurify.sanitize(html)
         return (
-            <div className="middle-reader-wrapper">
-                <div className="reader-burger"></div>
-                <Settings changeFont={this.handleFontChange} changeMode={this.handleModeChange} changeSize={this.handleSizeChange} />
-                <div dangerouslySetInnerHTML={{ __html: html}} />
-
+            <div className="reader-wrapper">
+                <div className="middle-reader-wrapper">
+                    <Burger changeNavigationState={this.handleNavigationState}/>
+                    <Settings changeFont={this.handleFontChange} changeMode={this.handleModeChange} changeSize={this.handleSizeChange} />
+                    <div dangerouslySetInnerHTML={{ __html: html}} />
+                </div>            
             </div>
+
         );
     }
 }
@@ -73,4 +80,4 @@ function mapStateToProps({reader}) {
     }
 }
 
-export default connect(mapStateToProps, { requestReader, changeFont, changeTheme,  changeSize })(Reader);
+export default connect(mapStateToProps, { requestReader, changeFont, changeTheme,  changeSize, switchNavigation })(Reader);

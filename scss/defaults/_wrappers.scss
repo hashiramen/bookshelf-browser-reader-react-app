@@ -2,22 +2,29 @@
 .site-wrapper {
     width:100%;
     min-height: 100vh;
+    position: relative;
 }
 
 .left-side {
+    position: absolute;
     background: $main-blackish;
     width:17%;
+    left:0%;
     float:left;
     min-height: 96vh;
+    transition:$main-transition;
 }
 
 .right-side{
+    position: absolute;
     background: $main-whiteish;
+    left:17%;
     width:83%;
     float:left;
     min-height: 96vh;
     max-height: 96vh;
     overflow: hidden;
+    transition:$main-transition;
 }
 
 .navigation-wrapper{
@@ -66,9 +73,13 @@
     position: relative;
 }
 
-.middle-wrapper{
+.middle-wrapper, .mybookshelf-wrapper{
     width: 93%;
     margin: auto;
+}
+
+.mybookshelf-wrapper{
+    color:black;
 }
 
 .middle-reader-wrapper {

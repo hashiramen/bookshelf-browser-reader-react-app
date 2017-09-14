@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-
+import lozad from 'lozad'
 //actions
 import { requestSelectedBook } from '../actions/books_actions'
 
@@ -11,7 +11,9 @@ class Book extends Component {
     }
 
     componentDidMount() {
-
+        console.log('lozad', lozad)
+        const observer = lozad();
+        observer.observe();
     }
 
     handleBookSelection(){
@@ -21,11 +23,12 @@ class Book extends Component {
     }
 
     render() {
+
         const { title, cover_thumb, author, handleBookClick } = this.props
         return (
             <div className="book">
                 <div className="book-thumb">
-                    <img src={`http://wolnelektury.pl/media/${cover_thumb}`} draggable="false" />
+                    <img data-src={`http://wolnelektury.pl/media/${cover_thumb}`} draggable="false" className="lozad"/>
                 </div>
                 <div className="book-title">
                     <p onClick={() => this.handleBookSelection()}>{title}</p>

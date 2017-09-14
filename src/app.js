@@ -7,10 +7,12 @@ import createSagaMiddleware from 'redux-saga'
 //LAYOUTS
 import Default from './components/layouts/Default'
 import ReaderDefault from './components/layouts/ReaderDefault'
+import BookshelfDefault from './components/layouts/BookshelfDefault'
 
 //CONTAINERS
 import Home from './containers/home/Home'
 import Reader from './containers/reader/Reader'
+import Bookshelf from './containers/mybookshelf/Bookshelf'
 
 import reducers from './reducers'
 import rootSaga from './sagas'
@@ -36,7 +38,8 @@ const routing = () => (
     <Router>
         <Switch>
             <Route exact path="/" render={() => <Default><Home/></Default>} />
-            <Route path="/reader/:title" render={(props) => <ReaderDefault><Reader {...props}/></ReaderDefault>} />
+            <Route path="/reader/:title" render={(props) => <Default><Reader {...props}/></Default>} />
+            <Route path="/mybookshelf" render={(props) => <Default><Bookshelf {...props}/></Default>} />
         </Switch>
     </Router>
 )

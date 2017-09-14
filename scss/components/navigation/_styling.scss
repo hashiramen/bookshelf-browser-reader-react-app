@@ -1,4 +1,5 @@
 @import 'tooltip';
+@import 'burger';
 
 .nav-header{
     width:100%;
@@ -95,4 +96,31 @@
 }
 .nav-redirect-to-bookshelf a:active{
     background: rgba(128, 128, 128, 0.25);
+}
+
+
+//if is closed
+.closed-nav > .left-side{
+    width:17%;
+    overflow: hidden;
+    left: -17%;
+}
+
+.closed-nav > .right-side {
+    width:100%;
+    left: 0;
+}
+
+.closed-nav > .right-side .menu-wrapper .reader-burger{
+    left:0;
+    color:black;
+}
+
+.closed-nav > .right-side .middle-reader-wrapper .reader-burger{
+    left:0;
+
+}
+
+.closed-nav > .right-side .middle-reader-wrapper .reader-settings{
+    left:3%;
 }

@@ -1,0 +1,25 @@
+.reader-burger{
+    height: 50px;
+    position: fixed;
+    top: 0;
+    left: 17%;
+    min-width: auto;
+    overflow: hidden;
+    transition: $main-transition;
+    z-index: 999;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &:hover > i{
+        opacity:.5;
+    }
+
+    i{
+        padding: 0rem 1rem;
+        float:left;
+        line-height: 50px;
+        transition: $main-transition;
+    }
+}

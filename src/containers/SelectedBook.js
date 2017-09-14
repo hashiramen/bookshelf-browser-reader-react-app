@@ -19,9 +19,9 @@ class SelectedBook extends Component {
         this.props.removeFromBookshelf(this.props.booksmng.books[this.props.selectedBook.selected.title])
     }
 
-    // componentWillUnmount(){
-    //     this.props.resetSelectedBook()
-    // }
+    componentWillUnmount(){
+        this.props.resetSelectedBook()
+    }
 
     render() {
         const { pending, selected } = this.props.selectedBook

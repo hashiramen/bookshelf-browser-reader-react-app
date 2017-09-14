@@ -8,6 +8,7 @@ const initialState = {
 export const ui = {}
 
 ui.switchNavigation = (state = initialState, action) => {
+    console.log(state.open)
     switch(action.type)
     {
         case uiAction.SWITCH_NAVIGATION:

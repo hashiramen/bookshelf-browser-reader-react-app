@@ -8,7 +8,7 @@
         height: 50px;
         position: fixed;
         top: 0;
-        left: 17%;
+        left: 20%;
         min-width: auto;
         overflow: hidden;
         transition: $main-transition;
@@ -64,7 +64,7 @@
             .settings-size{
                 width:16%;
                 float: left;
-                
+                padding-top: .6rem;
                 span{
                     width:50%;
                     float:left;

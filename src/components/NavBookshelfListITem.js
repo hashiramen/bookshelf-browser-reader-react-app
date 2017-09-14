@@ -23,8 +23,8 @@ class NavBookshelfListItem extends Component {
     }
 
     render() {
-        const { cover_thumb, title, url} = this.props
-        const newUrl = url.replace('http://wolnelektury.pl/katalog/lektura/', '')
+        const { cover_thumb, title, href} = this.props
+        const newUrl = href.replace('http://wolnelektury.pl/api/books/', '')
         return (
             <li onMouseEnter={() => this.handleListItemMouseEnter()} 
                 onMouseLeave={() => this.handleListItemMouseLeave()} 

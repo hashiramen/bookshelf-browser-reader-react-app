@@ -14,18 +14,35 @@ class Navigation extends Component {
         }
     }
 
-    componentDidMount() {
-        this.props.switchNavigation()
-    }
-
-    render() {
-        return (
-            <div className={this.props.navigation.open ? 'opened-nav': 'closed-nav'}>
+    renderIfIsOpened(){
+        return(
+            <div>
                 <div className="nav-header">
                     header
                 </div>
                 <Link to="/">Homepage</Link>
-                <BookshelfNav />
+                <BookshelfNav />            
+            </div>
+        )
+    }
+
+    renderIfIsClosed(){
+        return(
+            <div>
+
+            </div>
+        )
+    }
+
+    componentDidMount() {
+
+    }
+
+    render() {
+        const { open } = this.props.navigation
+        return (
+            <div className={this.props.navigation.open ? 'opened-nav': 'closed-nav'}>
+                {open ? this.renderIfIsOpened() : this.renderIfIsClosed()}
             </div>
         );
     }

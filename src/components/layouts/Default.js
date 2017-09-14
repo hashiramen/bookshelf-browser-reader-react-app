@@ -1,28 +1,24 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'
 
 import Navigation from '../../containers/Navigation'
-import SelectedBook from '../../containers/SelectedBook'
 
 class Default extends Component {
+    constructor(){
+        super()
+    }
+
     render() {
+        const { font, size, mode} = this.props
         return (
-            <div className="site-wrapper">
+            <div className={`site-wrapper ${this.props.navigation.open ? 'opened-nav': 'closed-nav'} ${mode} ${typeof font !== 'undefined' ? `font-${font.replace(' ', '-')} ${size}` : ''}`}>
                 <div className="left-side">
                     <div className="navigation-wrapper">
                         <Navigation />
                     </div>
                 </div>
                 <div className="right-side">
-                    <div className="menu-wrapper">
-                        menu
-                    </div>
-                    <SelectedBook />
-                    <div className="filter-wrapper">
-                        filter
-                    </div>
-                    <div className="books-wrapper">
-                        {this.props.children}
-                    </div>
+                    {this.props.children}
                 </div>
                 <footer>
                     <div className="credits">
@@ -34,4 +30,13 @@ class Default extends Component {
     }
 }
 
-export default Default;
+function mapStateToProps({navigation, reader}){
+    return {
+        navigation,
+        font: reader.font,
+        size: reader.size,
+        mode: reader.mode
+    }
+}
+
+export default connect(mapStateToProps, null)(Default);

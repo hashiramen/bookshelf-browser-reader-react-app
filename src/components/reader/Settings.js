@@ -23,7 +23,6 @@ class Settings extends Component {
                 <i className="fa fa-font" onClick={() => this.setState({open: !this.state.open})} />
                 <div className="reader-settings-dropdown">
                     <div className="settings-size">
-                        <p>rozmiar</p>
                         <span onClick={() => this.props.changeSize('')}>A</span>
                         <span onClick={() => this.props.changeSize('large-font')}>A</span>
                     </div>
